@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 18 — Список цветов с добавлением</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 18. JavaScript — выпадающий список цветов</h1>
+  <p class="subtitle">Добавляйте только корректные названия из встроенного списка (200+ цветов). Ввод нормализуется к нижнему регистру.</p>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h2 class="h2">Выберите цвет</h2>
+
+    <div class="row">
+      <label for="colorSelect" class="lbl">Цвета</label>
+      <select id="colorSelect" class="select" size="8" aria-describedby="help">
+        <!-- несколько стартовых опций; остальные можно добавить -->
+        <option>Белый</option>
+        <option>Черный</option>
+        <option>Красный</option>
+        <option>Синий</option>
+        <option>Зеленый</option>
+        <option>Yellow</option>
+        <option>Magenta</option>
+        <option>CornflowerBlue</option>
+      </select>
+    </div>
+
+    <div class="row add">
+      <label for="colorInput" class="lbl">Новый цвет</label>
+      <input id="colorInput" class="input" type="text" placeholder="например: Лавандовый или Lavender" />
+      <button id="addBtn" type="button" class="btn">добавить</button>
+    </div>
+
+    <p id="help" class="help">
+      Вводите название цвета (рус/англ). Будут приняты только названия из встроенного словаря. Подсказки появятся ниже.
+    </p>
+
+    <div id="msg" class="msg" role="status" aria-live="polite"></div>
+    <ul id="sugg" class="sugg" aria-label="Подсказки"></ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

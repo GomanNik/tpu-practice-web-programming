@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 8 — Операции по знакам a и b</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 8. Использование JavaScript (встроенные функции), HTML</h1>
+  <p class="subtitle">Введите два <strong>целых</strong> числа a и b — результат зависит от их знаков</p>
+</header>
+
+<main class="container">
+  <form id="form" class="card" novalidate>
+    <div class="grid">
+      <label class="label" for="a">a</label>
+      <input id="a" name="a" class="input" type="text" inputmode="numeric"
+             placeholder="например: 7" autocomplete="off" />
+      <div class="error" id="err-a" aria-live="polite"></div>
+
+      <label class="label" for="b">b</label>
+      <input id="b" name="b" class="input" type="text" inputmode="numeric"
+             placeholder="например: -3" autocomplete="off" />
+      <div class="error" id="err-b" aria-live="polite"></div>
+    </div>
+
+    <p class="hint">
+      Допустимы <strong>целые</strong> значения (знак «-» только в начале).
+      Правила: если <em>a</em> и <em>b</em> &gt; 0 → выводим <u>разность (a − b)</u>;
+      если &lt; 0 → <u>произведение (a · b)</u>;
+      если разных знаков (или один из них равен 0) → <u>сумму (a + b)</u>.
+    </p>
+
+    <button class="btn" type="submit">Рассчитать</button>
+  </form>
+
+  <section class="out" id="out" hidden>
+    <h2 id="headline">Результат</h2>
+    <div class="panel">
+      <div class="kv">
+        <div class="k">a</div><div class="v" id="va"></div>
+        <div class="k">b</div><div class="v" id="vb"></div>
+        <div class="k">Знаки</div><div class="v" id="vsigns"></div>
+        <div class="k">Операция</div><div class="v" id="vop"></div>
+        <div class="k">Вычисление</div><div class="v mono" id="vcalc"></div>
+        <div class="k">Ответ</div><div class="v strong" id="vans"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

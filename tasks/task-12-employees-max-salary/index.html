@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 12 — Сотрудник с максимальным окладом</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 12. Использование JavaScript (массивы, функции)</h1>
+  <p class="subtitle">Список сотрудников и выделение сотрудника с максимальным окладом</p>
+</header>
+
+<main class="container">
+  <!-- Список сотрудников -->
+  <section class="panel">
+    <h2 class="h2">Сотрудники</h2>
+
+    <div class="table-wrap">
+      <table class="table" aria-describedby="tbl-caption">
+        <caption id="tbl-caption" class="visually-hidden">Список сотрудников</caption>
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Имя</th>
+          <th scope="col" class="t-right">Оклад</th>
+        </tr>
+        </thead>
+        <tbody id="employeesBody"><!-- наполняется JS --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Максимальный оклад -->
+  <section class="panel panel--accent">
+    <h2 class="h2">Сотрудник(и) с максимальным окладом</h2>
+    <div id="maxWrap" class="max-wrap"><!-- наполняется JS --></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

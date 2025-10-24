@@ -1,0 +1,62 @@
+﻿:root{
+  --bg:#ffffff; --ink:#0f172a; --muted:#64748b;
+  --panel:#f8fbff; --border:#e5ebff;
+  --brand:#2563eb;
+  --radius:14px; --shadow:0 10px 26px rgba(2,6,23,.08);
+  --font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0; font:var(--font); color:var(--ink); background:var(--bg)}
+
+.site-header{ text-align:center; padding:24px 16px 10px }
+.title{ margin:0 0 6px; font-size:clamp(22px,3.6vw,32px) }
+.subtitle{ margin:0; color:var(--muted) }
+.site-footer{ text-align:center; padding:24px; color:var(--muted) }
+
+.container{ max-width:920px; margin:0 auto; padding:20px 16px 40px; display:grid; gap:22px }
+
+/* Панели */
+.panel{
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:18px clamp(16px,4vw,28px);
+}
+.panel--subtle{
+  background:#fbfdff;
+  border-color:#e7eefc;
+}
+.h2{ margin:0 0 10px; font-size:20px }
+
+/* Таблицы */
+.table-wrap{ overflow:auto; -webkit-overflow-scrolling:touch }
+.table{
+  width:100%; border-collapse:separate; border-spacing:0; background:#fff;
+  border:1px solid #e2e8f0; border-radius:12px; overflow:hidden;
+}
+.table thead th{
+  background:#f1f5f9; text-align:left; font-weight:700; padding:10px 12px; font-size:14px;
+  border-bottom:1px solid #e2e8f0;
+}
+.table tbody td{ padding:10px 12px; border-bottom:1px solid #eef2f7 }
+.table tbody tr:last-child td{ border-bottom:none }
+.table tfoot td{
+  padding:12px; background:#fafcff; border-top:1px solid #e2e8f0;
+}
+
+/* Приглушённый вид для «не выведенных» */
+.table--muted thead th{ background:#f6f7fb; color:#475569 }
+.table--muted tbody td{ color:#4b5563 }
+.table--muted tfoot td{ background:#f7f9fc }
+
+.t-right{ text-align:right }
+.t-muted{ color:#64748b }
+.t-strong{ font-weight:800 }
+
+.note{ margin:.5rem 0 0; color:#475569; font-size:14px }
+
+.visually-hidden{
+  position:absolute !important; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}

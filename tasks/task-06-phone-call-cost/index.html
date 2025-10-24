@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 6 — Стоимость телефонного разговора</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 6. Использование JavaScript (встроенные функции), HTML</h1>
+  <p class="subtitle">Стоимость разговора по минутам с учётом уикенд-скидки 20%</p>
+</header>
+
+<main class="container">
+  <form id="form" class="card" novalidate>
+    <label class="label" for="minutes">Минуты разговора (мин):</label>
+    <input id="minutes" name="minutes" class="input" type="text" inputmode="decimal"
+           placeholder="например: 12,5" autocomplete="off" aria-describedby="hint-min err-min" />
+    <div id="hint-min" class="hint">Неотрицательное число. Дробная часть — точка или запятая.</div>
+    <div id="err-min" class="error" aria-live="polite"></div>
+
+    <label class="label" for="rate">Стоимость 1 минуты (₽):</label>
+    <input id="rate" name="rate" class="input" type="text" inputmode="decimal"
+           placeholder="например: 3.20" autocomplete="off" aria-describedby="hint-rate err-rate" />
+    <div id="hint-rate" class="hint">Неотрицательное число. Дробная часть — точка или запятая.</div>
+    <div id="err-rate" class="error" aria-live="polite"></div>
+
+    <button class="btn" type="submit">Рассчитать</button>
+  </form>
+
+  <!-- Результат -->
+  <h2 id="result" class="result" hidden></h2>
+  <p id="note" class="note" hidden></p>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 9 — Массив товаров и средняя цена</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 9. Использование JavaScript (массивы)</h1>
+  <p class="subtitle">Вывод массива товаров (ID, Title, Price) и средней стоимости</p>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h2 class="h2">Товары</h2>
+    <div class="table-wrap">
+      <table class="table" id="productsTable" aria-describedby="tbl-caption">
+        <caption id="tbl-caption" class="visually-hidden">Список товаров</caption>
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Название</th>
+          <th scope="col" class="t-right">Цена</th>
+        </tr>
+        </thead>
+        <tbody id="productsBody"><!-- наполняется JS --></tbody>
+        <tfoot>
+        <tr>
+          <td colspan="3" class="t-right t-muted">Средняя стоимость</td>
+          <td id="avgCell" class="t-right t-strong">—</td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

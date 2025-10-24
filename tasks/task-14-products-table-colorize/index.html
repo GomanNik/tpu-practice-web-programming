@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 14 — Подсветка строк по средней цене</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 14. HTML+CSS, DOM, JS</h1>
+  <p class="subtitle">Закрасить строки: цена &gt; средней — красным, &lt; средней — зелёным</p>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <h2 class="h2">Товары</h2>
+
+    <div class="table-wrap">
+      <table class="table" id="productsTable" aria-describedby="tbl-caption">
+        <caption id="tbl-caption" class="visually-hidden">Список товаров с подсветкой относительно средней цены</caption>
+        <thead>
+        <tr>
+          <th scope="col">ID товара</th>
+          <th scope="col">Название товара</th>
+          <th scope="col" class="t-right">Стоимость</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        <!-- 5 строк — цены продублированы в data-price для точного вычисления -->
+        <tr data-price="2590"><td>101</td><td>Кофеварка капельная</td><td class="t-right">2 590 ₽</td></tr>
+        <tr data-price="1890.5"><td>102</td><td>Электрочайник</td><td class="t-right">1 890,50 ₽</td></tr>
+        <tr data-price="1490"><td>103</td><td>Тостер компактный</td><td class="t-right">1 490 ₽</td></tr>
+        <tr data-price="2199.99"><td>104</td><td>Блендер ручной</td><td class="t-right">2 199,99 ₽</td></tr>
+        <tr data-price="990"><td>105</td><td>Весы кухонные</td><td class="t-right">990 ₽</td></tr>
+        </tbody>
+        <tfoot>
+        <tr>
+          <td colspan="2" class="t-muted">Средняя стоимость</td>
+          <td id="avgCell" class="t-right t-strong">—</td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <p class="legend">
+      <span class="badge badge--low">ниже средней</span>
+      <span class="badge badge--high">выше средней</span>
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 5 — Цельсий → Фаренгейт</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 5. Использование JavaScript (функции), HTML</h1>
+  <p class="subtitle">Введите температуру в °C — получим значение в °F</p>
+</header>
+
+<main class="container">
+  <form id="form" class="card" novalidate>
+    <label class="label" for="celsius">Температура (°C):</label>
+    <input
+      id="celsius"
+      name="celsius"
+      class="input"
+      type="text"
+      inputmode="decimal"
+      placeholder="например: -7,5"
+      autocomplete="off"
+      aria-describedby="hint error"
+    />
+    <div id="hint" class="hint">Допустимы числа (можно отрицательные) ≥ −273.15 °C. Дробная часть — точка или запятая.</div>
+    <div id="error" class="error" aria-live="polite"></div>
+    <button class="btn" type="submit">Преобразовать</button>
+  </form>
+
+  <!-- Результат (H2 по центру) -->
+  <h2 id="result" class="result" hidden></h2>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

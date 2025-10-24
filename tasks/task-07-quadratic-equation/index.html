@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 7 — Решение квадратного уравнения</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 7. Использование JavaScript (встроенные функции), HTML</h1>
+  <p class="subtitle">Решение ax² + bx + c = 0 с округлением до двух знаков</p>
+</header>
+
+<main class="container">
+  <form id="form" class="card" novalidate>
+    <div class="grid">
+      <label class="label" for="a">a</label>
+      <input id="a" name="a" class="input" type="text" inputmode="decimal" placeholder="например: 1" autocomplete="off" />
+      <div class="error" id="err-a" aria-live="polite"></div>
+
+      <label class="label" for="b">b</label>
+      <input id="b" name="b" class="input" type="text" inputmode="decimal" placeholder="например: -3,5" autocomplete="off" />
+      <div class="error" id="err-b" aria-live="polite"></div>
+
+      <label class="label" for="c">c</label>
+      <input id="c" name="c" class="input" type="text" inputmode="decimal" placeholder="например: 2" autocomplete="off" />
+      <div class="error" id="err-c" aria-live="polite"></div>
+    </div>
+
+    <p class="hint">Вводите числа (допускаются «-», «,», «.»). Коэффициент <strong>a ≠ 0</strong>. Нельзя записывать целые с ведущим нулём (например, <code>01</code>).</p>
+    <button class="btn" type="submit">Решить</button>
+  </form>
+
+  <section class="out" id="out" hidden>
+    <h2 id="headline">Решение</h2>
+
+    <!-- Формулы (статично, ради наглядности) -->
+    <div class="formulas">
+      <div class="eq"><strong>D</strong> = b<sup>2</sup> − 4ac</div>
+      <div class="eq">
+        <strong>x</strong><sub>1,2</sub> =
+        <span class="frac">
+            <span class="num">−b ± √D</span>
+            <span class="bar"></span>
+            <span class="den">2a</span>
+          </span>
+      </div>
+    </div>
+
+    <!-- Подстановка и вычисления -->
+    <div id="work" class="work"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

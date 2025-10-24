@@ -1,0 +1,107 @@
+﻿:root{
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #666666;
+
+  /* палитра для “выделения” параграфов (произвольные, контрастные) */
+  --c1: #1e88e5; /* синий */
+  --c2: #43a047; /* зелёный */
+  --c3: #e53935; /* красный */
+  --c4: #8e24aa; /* фиолетовый */
+  --c5: #fb8c00; /* оранжевый */
+
+  --maxw: 72ch;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+/* Шапка и подвал */
+.site-header, .site-footer{
+  padding: 16px;
+  text-align: center;
+}
+
+.site-header h1{
+  margin: 12px 0 4px;
+  font-size: 22px;
+}
+
+.subtitle{
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.site-footer small{
+  color: var(--muted);
+}
+
+/* Контейнер */
+.container{
+  margin: 0 auto;
+  padding: 16px;
+  max-width: var(--maxw);
+}
+
+/* Параграфы */
+.para{
+  text-align: justify;          /* выравнивание по ширине */
+  hyphens: auto;                /* переносы */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  margin: 0 0 1rem 0;
+}
+
+/* Акцент цвета для каждого параграфа — через левую границу и цвет заголовков */
+.p1{ border-left: 4px solid var(--c1); padding-left: 12px; color: #0b2a4a; }
+.p2{ border-left: 4px solid var(--c2); padding-left: 12px; color: #143b20; }
+.p3{ border-left: 4px solid var(--c3); padding-left: 12px; color: #4a1412; }
+.p4{ border-left: 4px solid var(--c4); padding-left: 12px; color: #2f1240; }
+.p5{ border-left: 4px solid var(--c5); padding-left: 12px; color: #4a2a0b; }
+
+/* Изображение в одном из параграфов, выровненное по правому краю */
+.img-right{
+  float: right;
+  max-width: 40%;
+  height: auto;
+  margin: 0 0 8px 16px; /* отступ слева, чтобы текст не лип к картинке */
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Уточнение поведения контейнера с картинкой на узких экранах */
+.with-image::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 640px){
+  .img-right{
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 8px auto;
+  }
+}
+
+/* Доступность для скрытого заголовка раздела */
+.visually-hidden{
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  border: 0;
+}
+

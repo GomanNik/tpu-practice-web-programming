@@ -1,0 +1,71 @@
+﻿:root{
+  --bg:#ffffff; --ink:#0f172a; --muted:#64748b;
+  --panel:#f8fbff; --border:#e5ebff;
+  --radius:14px; --shadow:0 10px 26px rgba(2,6,23,.08);
+  --font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+
+  /* Подсветка */
+  --low-bg:#e8f7ec;   --low-border:#36a269; --low-ink:#124c2b;
+  --high-bg:#ffe9e7;  --high-border:#d64545; --high-ink:#5f1111;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0; font:var(--font); color:var(--ink); background:var(--bg)}
+
+.site-header{ text-align:center; padding:24px 16px 10px }
+.title{ margin:0 0 6px; font-size:clamp(22px,3.6vw,32px) }
+.subtitle{ margin:0; color:var(--muted) }
+.site-footer{ text-align:center; padding:24px; color:var(--muted) }
+
+.container{ max-width:920px; margin:0 auto; padding:20px 16px 40px; display:grid; gap:22px }
+
+/* Панель */
+.panel{
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:18px clamp(16px,4vw,28px);
+}
+.h2{ margin:0 0 10px; font-size:20px }
+
+/* Таблица */
+.table-wrap{ overflow:auto; -webkit-overflow-scrolling:touch }
+.table{
+  width:100%; border-collapse:separate; border-spacing:0; background:#fff;
+  border:1px solid #e2e8f0; border-radius:12px; overflow:hidden;
+}
+.table thead th{
+  background:#f1f5f9; text-align:left; font-weight:700; padding:10px 12px; font-size:14px;
+  border-bottom:1px solid #e2e8f0;
+}
+.table tbody td{ padding:10px 12px; border-bottom:1px solid #eef2f7 }
+.table tbody tr:last-child td{ border-bottom:none }
+.table tfoot td{
+  padding:12px; background:#fafcff; border-top:1px solid #e2e8f0;
+}
+
+/* Выравнивания/утилиты */
+.t-right{ text-align:right }
+.t-muted{ color:#64748b }
+.t-strong{ font-weight:800 }
+
+/* Подсветка строк */
+.row-low  { background: var(--low-bg);  color: var(--low-ink); }
+.row-high { background: var(--high-bg); color: var(--high-ink); }
+.row-low  td:first-child  { border-left: 4px solid var(--low-border); }
+.row-high td:first-child  { border-left: 4px solid var(--high-border); }
+
+/* Легенда */
+.legend{ margin:.5rem 0 0; color:#475569; display:flex; gap:8px; flex-wrap:wrap }
+.badge{
+  display:inline-block; padding:4px 10px; border-radius:999px; font-size:13px;
+  border:1px solid #cbd5e1; background:#fff;
+}
+.badge--low{ background:var(--low-bg);  border-color:var(--low-border);  color:var(--low-ink) }
+.badge--high{ background:var(--high-bg); border-color:var(--high-border); color:var(--high-ink) }
+
+/* a11y */
+.visually-hidden{
+  position:absolute !important; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}

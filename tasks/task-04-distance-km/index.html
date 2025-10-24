@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 4 — Полные километры из метров</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 4. Использование JavaScript (функции), HTML</h1>
+  <p class="subtitle">Введите расстояние в метрах → получим число полных километров</p>
+</header>
+
+<main class="container">
+  <form id="form" class="card" novalidate>
+    <label class="label" for="meters">Расстояние (м):</label>
+    <input
+      id="meters"
+      name="meters"
+      class="input"
+      type="text"
+      inputmode="decimal"
+      placeholder="например: 1520,5"
+      autocomplete="off"
+      aria-describedby="hint error"
+    />
+    <div id="hint" class="hint">Допустимы числа ≥ 0. Дробная часть — точка или запятая.</div>
+    <div id="error" class="error" aria-live="polite"></div>
+    <button class="btn" type="submit">Посчитать</button>
+  </form>
+
+  <!-- Результат (H1 по центру) -->
+  <h1 id="result" class="result" hidden></h1>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

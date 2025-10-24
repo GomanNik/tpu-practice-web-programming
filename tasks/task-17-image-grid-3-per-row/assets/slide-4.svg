@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720">
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g4)"/>
+  <g fill="#0b1324" font-family="Segoe UI, Roboto, Arial">
+    <text x="80" y="160" font-size="82" font-weight="800">DOM</text>
+    <text x="80" y="250" font-size="28" font-weight="600" fill="rgba(11,19,36,.8)">Работа с документом</text>
+  </g>
+</svg>

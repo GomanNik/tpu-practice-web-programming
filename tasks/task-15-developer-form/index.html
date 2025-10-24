@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Анкета web-разработчика</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<main class="wrap">
+  <form id="devForm" class="form" autocomplete="off">
+    <table class="anketa" aria-label="Анкета web-разработчика">
+      <colgroup>
+        <col class="col-left" />
+        <col class="col-right" />
+      </colgroup>
+      <tbody>
+      <!-- Регистрационное имя -->
+      <tr>
+        <td class="label"><label for="login">Регистрационное имя</label></td>
+        <td class="field">
+          <input type="text" name="login" id="login" class="text" />
+        </td>
+      </tr>
+
+      <!-- Пароль + подтверждение в той же строке -->
+      <tr>
+        <td class="label"><label for="pass">Пароль</label></td>
+        <td class="field">
+          <div class="inline">
+            <input type="password" name="pass" id="pass" class="text" />
+            <span class="sep">
+                : <label for="pass2" class="visually-hidden">подтвердите пароль</label>подтвердите пароль
+              </span>
+            <input type="password" name="pass2" id="pass2" class="text" />
+          </div>
+        </td>
+      </tr>
+
+      <!-- Специализация -->
+      <tr>
+        <td class="label"><label for="spec">Ваша специализация</label></td>
+        <td class="field">
+          <select name="spec" id="spec" class="select">
+            <option>Web-мастер</option>
+            <option>Frontend-разработчик</option>
+            <option>Backend-разработчик</option>
+            <option>Дизайнер</option>
+            <option>QA-инженер</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Пол -->
+      <tr>
+        <td class="label">Пол</td>
+        <td class="field">
+          <label class="radio"><input type="radio" name="sex" value="М" checked /> М</label>
+          <label class="radio"><input type="radio" name="sex" value="Ж" /> Ж</label>
+        </td>
+      </tr>
+
+      <!-- Навыки -->
+      <tr>
+        <td class="label">Ваши навыки</td>
+        <td class="field skills">
+          <label><input type="checkbox" name="skills" value="HTML и CSS" /> знание HTML и CSS</label>
+          <label><input type="checkbox" name="skills" value="Perl" /> знание Perl</label>
+          <label><input type="checkbox" name="skills" value="ASP" /> знание ASP</label>
+          <label><input type="checkbox" name="skills" value="Adobe Photoshop" /> знание Adobe Photoshop</label>
+          <label><input type="checkbox" name="skills" value="JAVA" /> знание JAVA</label>
+          <label><input type="checkbox" name="skills" value="JavaScript" /> знание JavaScript</label>
+          <label><input type="checkbox" name="skills" value="Flash" /> знание Flash</label>
+        </td>
+      </tr>
+
+      <!-- Дополнительные сведения -->
+      <tr>
+        <td class="label"><label for="about">Дополнительные сведения о себе</label></td>
+        <td class="field">
+          <textarea name="about" id="about" class="area" rows="6"></textarea>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <!-- Кнопки -->
+    <div class="buttons">
+      <button type="button" id="submitBtn" class="btn btn-primary">зарегистрировать</button>
+      <button type="reset" class="btn btn-reset">очистить форму</button>
+    </div>
+  </form>
+</main>
+
+<script src="./script.js"></script>
+</body>
+</html>

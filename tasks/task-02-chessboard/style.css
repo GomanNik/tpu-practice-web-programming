@@ -1,0 +1,109 @@
+﻿:root{
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted:#6b7280;
+
+  /* цвета доски */
+  --blue-sq: #0a57d3;   /* тёмные клетки */
+  --light:   #ffffff;
+
+  /* оформление рамки и подписей */
+  --frame-color: #0a57d3;  /* рамка как в образце */
+  --label-ink:   #0a3c99;  /* подписи темнее рамки */
+
+  --size:  min(92vmin, 640px);
+  --gutter: 28px;      /* поля под подписи */
+  --frame:  10px;      /* толще рамка */
+  --radius: 6px;
+  --font: 14px/1 Segoe UI, system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+*{ box-sizing: border-box; }
+body{
+  margin:0;
+  font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--fg);
+  background:var(--bg);
+}
+
+.site-header,.site-footer{ text-align:center; padding:16px; }
+.subtitle,.site-footer small{ color:var(--muted); }
+
+.container{
+  margin:0 auto; padding:16px;
+  display:grid; place-items:center;
+}
+
+/* общая рамка + сетка 10×10 */
+.frame{
+  width:var(--size);
+  aspect-ratio:1 / 1;
+  border:var(--frame) solid var(--frame-color);
+  border-radius:var(--radius);
+  display:grid;
+  grid-template-columns: var(--gutter) repeat(8, 1fr) var(--gutter);
+  grid-template-rows:    var(--gutter) repeat(8, 1fr) var(--gutter);
+  background:var(--light);
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+}
+
+/* доска 8×8 в центре */
+.board{
+  grid-area: 2 / 2 / 10 / 10;
+  border: 3px solid var(--frame-color);
+  border-radius: 2px;
+  background:
+    conic-gradient(
+      from 90deg,
+      var(--blue-sq) 0 25%,
+      var(--light)   0 50%,
+      var(--blue-sq) 0 75%,
+      var(--light)   0 100%
+    ) 0 0 / 25% 25%;
+}
+
+/* подписи */
+.files, .ranks{
+  font: var(--font);
+  color: var(--label-ink);   /* темнее */
+  user-select: none;
+  font-weight: 600;          /* визуально «жирнее», как на образце */
+  letter-spacing: .02em;
+}
+
+.files{
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items:center;
+  justify-items:center;
+  padding-inline: 6px;
+}
+.files-top{    grid-area: 1 / 2 / 2 / 10; }
+.files-bottom{ grid-area: 10 / 2 / 11 / 10; }
+
+.ranks{
+  display:grid;
+  grid-template-rows: repeat(8, 1fr);
+  align-items:center;
+  justify-items:center;
+  padding-block: 6px;
+}
+.ranks-left{  grid-area: 2 / 1 / 10 / 2; }
+.ranks-right{ grid-area: 2 / 10 / 10 / 11; }
+
+/* переворот верхних букв целой строкой */
+.rotate-180{ transform: rotate(180deg); }
+
+/* а здесь переворачиваем КАЖДУЮ цифру справа */
+.ranks-right span{
+  display:inline-block;
+  transform: rotate(180deg);
+}
+
+/* подпись под рисунком */
+.caption{
+  margin-top:12px;
+  color:var(--muted);
+  text-align:center;
+}
+

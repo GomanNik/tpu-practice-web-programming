@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 10 — Студенты с GRADE > 4</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 10. Использование JavaScript (массивы)</h1>
+  <p class="subtitle">Вывести студентов, у которых средний балл (GRADE) выше 4</p>
+</header>
+
+<main class="container">
+  <!-- Блок: показанные студенты -->
+  <section class="panel">
+    <h2 class="h2">Студенты (GRADE &gt; 4)</h2>
+
+    <div class="table-wrap">
+      <table class="table" id="studentsTable" aria-describedby="tbl-caption">
+        <caption id="tbl-caption" class="visually-hidden">Список студентов с GRADE выше 4</caption>
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">ФИО</th>
+          <th scope="col" class="t-right">GRADE</th>
+        </tr>
+        </thead>
+        <tbody id="studentsBody"><!-- наполняется JS --></tbody>
+        <tfoot>
+        <tr>
+          <td colspan="4" id="footerNote" class="t-muted">—</td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+  <!-- Блок: НЕ выведенные студенты -->
+  <section class="panel panel--subtle">
+    <h2 class="h2">Не выведены (GRADE ≤ 4)</h2>
+
+    <div class="table-wrap">
+      <table class="table table--muted" id="excludedTable" aria-describedby="excl-caption">
+        <caption id="excl-caption" class="visually-hidden">Студенты, не попавшие под условие GRADE &le; 4</caption>
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">ФИО</th>
+          <th scope="col" class="t-right">GRADE</th>
+        </tr>
+        </thead>
+        <tbody id="excludedBody"><!-- наполняется JS --></tbody>
+        <tfoot>
+        <tr>
+          <td colspan="4" id="excludedNote" class="t-muted">—</td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <p class="note">Здесь отображаются студенты, чья оценка не превышает 4 и потому они не попали в основной список.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

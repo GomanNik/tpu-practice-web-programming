@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 20 — Шахматная доска с фигурами (DOM)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1>Задача 20. HTML, CSS, JS (массивы, DOM)</h1>
+  <p class="subtitle">Шахматная доска 8×8 с подписями. Фигуры добавляются скриптом через DOM из массива.</p>
+</header>
+
+<main class="container">
+  <figure class="board-wrap">
+    <div class="frame" role="img" aria-label="Шахматная доска 8 на 8 с подписями и фигурами">
+      <!-- верхние буквы (повёрнуты, размещены над соответствующими файлами) -->
+      <div class="files files-top rotate-180">
+        <span>h</span><span>g</span><span>f</span><span>e</span>
+        <span>d</span><span>c</span><span>b</span><span>a</span>
+      </div>
+
+      <!-- левый столбец цифр: 8 → 1 -->
+      <div class="ranks ranks-left">
+        <span>8</span><span>7</span><span>6</span><span>5</span>
+        <span>4</span><span>3</span><span>2</span><span>1</span>
+      </div>
+
+      <!-- внутренняя область 8×8; клетки и фигуры вставит script.js -->
+      <div class="board" aria-label="Поле для расстановки фигур"></div>
+
+      <!-- правый столбец цифр: 8 → 1 (каждая цифра перевёрнута) -->
+      <div class="ranks ranks-right">
+        <span>8</span><span>7</span><span>6</span><span>5</span>
+        <span>4</span><span>3</span><span>2</span><span>1</span>
+      </div>
+
+      <!-- нижние буквы (как у белых) -->
+      <div class="files files-bottom">
+        <span>a</span><span>b</span><span>c</span><span>d</span>
+        <span>e</span><span>f</span><span>g</span><span>h</span>
+      </div>
+    </div>
+    <figcaption class="caption">Классическая стартовая позиция, фигуры — юникод-символы.</figcaption>
+  </figure>
+
+  <noscript>
+    <p style="color:#b91c1c">Для отображения фигур требуется включённый JavaScript.</p>
+  </noscript>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

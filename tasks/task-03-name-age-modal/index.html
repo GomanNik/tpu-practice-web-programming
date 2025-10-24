@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 3 — Имя и возраст (модальное окно)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1>Задача 3. Использование JavaScript (функции)</h1>
+  <p class="subtitle">Запрос имени и возраста → вывод в модальном окне</p>
+</header>
+
+<main class="container">
+  <button class="btn" id="runBtn">Запросить имя и возраст</button>
+</main>
+
+<!-- Модальное окно -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="modal__dialog">
+    <h2 id="modal-title" class="modal__title">Результат</h2>
+    <div class="modal__body" id="modalBody"></div>
+    <div class="modal__actions">
+      <button class="btn btn--ghost" id="closeBtn" aria-label="Закрыть">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+﻿{
+  "name": "tpu-practice-web-programming",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "echo \"Откройте нужный tasks/<task>/index.html в браузере или через WebStorm (Open in Browser)\""
+  }
+}

@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Задача 11 — 10 случайных чисел: элементы, сумма, среднее</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="title">Задача 11. Использование JavaScript (массивы, функции)</h1>
+  <p class="subtitle">Сгенерировать массив из 10 случайных чисел → вывести элементы, сумму и среднее</p>
+</header>
+
+<main class="container">
+  <section class="panel">
+    <div class="panel-head">
+      <h2 class="h2">Массив из 10 случайных чисел (1…100)</h2>
+      <button id="regen" class="btn">Сгенерировать заново</button>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table" aria-describedby="tbl-caption">
+        <caption id="tbl-caption" class="visually-hidden">Список элементов массива</caption>
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col" class="t-right">Значение</th>
+        </tr>
+        </thead>
+        <tbody id="body"><!-- наполняется JS --></tbody>
+        <tfoot>
+        <tr>
+          <td class="t-muted">Количество</td>
+          <td id="count" class="t-right">—</td>
+        </tr>
+        <tr>
+          <td class="t-muted">Сумма</td>
+          <td id="sum" class="t-right t-strong">—</td>
+        </tr>
+        <tr>
+          <td class="t-muted">Среднее</td>
+          <td id="avg" class="t-right t-strong">—</td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© Учебное задание</small>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
